@@ -28,9 +28,7 @@ Sample App is also packaged as a docker image at gstackio/sample-app
 cf push wow-cool -o gstackio/sample-app -d <my-family-name>.gstack.io
 ```
 
-<small>
-→ where `<my-family-name>` is to be replaced by your own family name.
-</small>
+→ Where `<my-family-name>` is to be replaced by your own family name.
 
 ### To rebuild the dockerimage:
 
