@@ -17,7 +17,7 @@ func (p *Hello) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 
 	styledTemplate.Execute(w, Body{Body: fmt.Sprintf(`
 <div class="hello">
-	Test App	
+	Gstack rocks!
 </div>
 
 <div class="my-index">My Index Is</div>
