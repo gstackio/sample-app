@@ -1,6 +1,8 @@
 ---
 applications:
   - name: sample-app
-    memory: 256M
+    buildpack: go_buildpack
+    memory: 8M
+    disk_quota: 10M
     instances: 1
-    random-route: true
+    # random-route: true
