@@ -25,7 +25,7 @@ cf push sample-app -c "sample-app --ports=7777,8888"
 Sample App is also packaged as a docker image at gstackio/sample-app
 
 ```bash
-cf push wow-cool -o gstackio/sample-app -d <my-family-name>.gstack.io
+cf push wow-cool -o gstackio/sample-app -d <my-family-name>.gstack.me
 ```
 
 → Where `<my-family-name>` is to be replaced by your own family name.
