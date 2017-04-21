@@ -9,6 +9,7 @@ import (
 	"time"
 
 	"github.com/gstackio/sample-app/handlers"
+	"github.com/gstackio/sample-app/headers"
 	"github.com/gstackio/sample-app/helpers"
 	"github.com/gstackio/sample-app/routes"
 	"github.com/pivotal-golang/lager"

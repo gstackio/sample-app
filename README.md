@@ -12,6 +12,7 @@ gk push sample-app
 - `/env`: displays environment variables
 - `/exit`: instructs the app to exit with status code 1
 - `/index`: returns the application index
+- `/headers`: dump request headers
 - `/port`: returns the local port the request was received on
 
 ### Configure the app to listen on multiple ports

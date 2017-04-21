@@ -3,11 +3,12 @@ package routes
 import "github.com/tedsuo/rata"
 
 const (
-	Env   = "ENV"
-	Hello = "HELLO"
-	Exit  = "EXIT"
-	Index = "INDEX"
-	Port  = "PORT"
+	Env     = "ENV"
+	Hello   = "HELLO"
+	Exit    = "EXIT"
+	Index   = "INDEX"
+	Port    = "PORT"
+	Headers = "HEADERS"
 )
 
 var Routes = rata.Routes{
@@ -16,4 +17,5 @@ var Routes = rata.Routes{
 	{Path: "/exit", Method: "GET", Name: Exit},
 	{Path: "/index", Method: "GET", Name: Index},
 	{Path: "/port", Method: "GET", Name: Port},
+	{Path: "/headers", Method: "GET", Name: Headers},
 }

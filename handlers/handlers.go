@@ -19,6 +19,7 @@ func New(logger lager.Logger, port string) rata.Handlers {
 		routes.Port: &Port{
 			Port: port,
 		},
+		routes.Headers: &Headers{},
 	}
 
 	for route, handler := range handlers {
