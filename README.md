@@ -1,9 +1,9 @@
-# Test App - a simple Go webapp
+# Sample App - a simple Go webapp
 
-### Pushing the app to Cloud Foundry
+### Pushing the app to Gstack
 
 ```
-cf push test-app
+gk push test-app
 ```
 
 ### Endpoints
@@ -20,13 +20,17 @@ By providing a customer start command, you can configure the app to listen on mu
 cf push test-app -c "test-app --ports=7777,8888"
 ```
 
-### Pushing the app to CF as a Docker image
+### Pushing the app to Gstack as a Docker image
 
-Simple App is also packaged as a docker image at cloudfoundry/test-app
+Sample App is also packaged as a docker image at gstackio/sample-app
 
 ```bash
-cf push my-test-app -o cloudfoundry/test-app
+cf push wow-cool -o gstackio/sample-app -d <my-family-name>.gstack.io
 ```
+
+<small>
+→ where `<my-family-name>` is to be replaced by your own family name.
+</small>
 
 ### To rebuild the dockerimage:
 
