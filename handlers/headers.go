@@ -17,4 +17,5 @@ func (p *Headers) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	}
 
 	fmt.Fprintf(w, "%q", dump)
+	// w.Write(dump)
 }
