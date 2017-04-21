@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/cloudfoundry-samples/test-app/helpers"
+	"github.com/gstackio/sample-app/helpers"
 )
 
 type Hello struct {

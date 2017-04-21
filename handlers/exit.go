@@ -6,7 +6,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/cloudfoundry-samples/test-app/helpers"
+	"github.com/gstackio/sample-app/helpers"
 )
 
 type Exit struct {
