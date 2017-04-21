@@ -1,6 +1,6 @@
 FROM busybox:ubuntu-14.04
 
-ENTRYPOINT ["/test-app"]
+ENTRYPOINT ["/sample-app"]
 
-COPY test-app /test-app
-RUN chmod a+x /test-app
+COPY sample-app /sample-app
+RUN chmod a+x /sample-app

@@ -10,4 +10,4 @@ docker build -t="gstackio/sample-app" .
 docker push gstackio/sample-app
 
 echo "Cleaning up..."
-rm test-app
+rm sample-app
