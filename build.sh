@@ -2,12 +2,29 @@
 
 set -e
 
-echo "Compiling for linux..."
+DOCKER_REPO=${DOCKER_REPO:-gstack/sample-app}
+DOCKER_TAG=${DOCKER_TAG:-v1.0}
+
+RESET=$(tput sgr0)
+BOLD=$(tput bold)
+GREEN=$(tput setaf 2)
+
+function headline() {
+    local msg=$1
+    echo -e "\n${BOLD}${GREEN}$msg${RESET}"
+}
+
+function exit_trap() {
+    headline "Cleaning up..."
+    rm sample-app
+}
+trap exit_trap EXIT
+
+headline "Compiling for linux..."
 GOOS=linux GOARCH=amd64 go build .
 
-echo "Constructing Dockerimage"
-docker build -t="gstackio/sample-app" .
-docker push gstackio/sample-app
+headline "Constructing Docker image"
+docker build -t="$DOCKER_REPO:$DOCKER_TAG" .
 
-echo "Cleaning up..."
-rm sample-app
+headline "Pushing image to Docker hub"
+docker push "$DOCKER_REPO:$DOCKER_TAG"
