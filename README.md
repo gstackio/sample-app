@@ -3,7 +3,7 @@
 ### Pushing the app to Gstack
 
 ```
-gk push test-app
+gk push sample-app
 ```
 
 ### Endpoints
@@ -17,7 +17,7 @@ gk push test-app
 
 By providing a customer start command, you can configure the app to listen on multiple ports. The app responds the same way to each port.
 ```
-cf push test-app -c "test-app --ports=7777,8888"
+cf push sample-app -c "sample-app --ports=7777,8888"
 ```
 
 ### Pushing the app to Gstack as a Docker image

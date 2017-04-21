@@ -35,7 +35,7 @@ func init() {
 func main() {
 	flag.Parse()
 
-	logger := lager.NewLogger("test-app")
+	logger := lager.NewLogger("sample-app")
 	if quiet {
 		logger.RegisterSink(lager.NewWriterSink(os.Stdout, lager.INFO))
 	} else {
@@ -44,7 +44,7 @@ func main() {
 
 	ports := getServerPorts()
 
-	logger.Info("test-app.starting", lager.Data{"ports": ports})
+	logger.Info("sample-app.starting", lager.Data{"ports": ports})
 	index, err := helpers.FetchIndex()
 	appName := fetchAppName()
 	go func() {
@@ -70,7 +70,7 @@ func main() {
 			}
 
 			server := ifrit.Envoke(http_server.New(":"+port, handler))
-			logger.Info("test-app.up", lager.Data{"port": port})
+			logger.Info("sample-app.up", lager.Data{"port": port})
 			err = <-server.Wait()
 			if err != nil {
 				logger.Error("shutting down server", err, lager.Data{"server port": port})
@@ -85,7 +85,7 @@ func main() {
 func fetchAppName() string {
 	appName := os.Getenv("APP_NAME")
 	if appName == "" {
-		return "test-app"
+		return "sample-app"
 	}
 	return appName
 }
