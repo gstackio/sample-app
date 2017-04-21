@@ -3,7 +3,7 @@
 set -e
 
 DOCKER_REPO=${DOCKER_REPO:-gstack/sample-app}
-DOCKER_TAG=${DOCKER_TAG:-v1.0}
+DOCKER_TAG=${DOCKER_TAG:-latest}
 
 RESET=$(tput sgr0)
 BOLD=$(tput bold)
