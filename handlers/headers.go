@@ -4,9 +4,6 @@ import (
 	"fmt"
 	"net/http"
 	"net/http/httputil"
-	"time"
-
-	"github.com/gstackio/sample-app/helpers"
 )
 
 type Headers struct {
